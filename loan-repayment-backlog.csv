@@ -1,0 +1,47 @@
+Epic,User Story,Description,Task,Acceptance Criteria,Notes
+1. Dashboard,1.1 Display Dashboard with Loan Overview and Offers,"As a user, I want to see an overview of my lbank account, previous loans and available loan offers on the dashboard so that I can quickly understand my loan status and explore new offers.
+",Create dashboard UI with sections for bank account and loan overview and loan offers.,"Dashboard displays different bank account summaries.
+
+Dashboard includes a list of loans with ID, balance, and a detail button
+and a section for loan offers with relevant details and options to apply.",
+,,,Implement API integration to fetch bank account and loan summary and available loan offers (GET).,,
+,,,Display loan summaries and loan offers on the dashboard.,,
+2. Loan Details and Repayment and Payment Method Options,2.1View Loan Details,"As a user, I want to view the details of a selected loan so that I can understand the repayment requirements.",Create loan details page UI,"Loan details page displays loan information.
+
+Buttons redirect users to the redirect pages.
+",
+,,,Implement API integration to fetch loan details (GET).,,
+,,,Display loan details on the page,,
+,,,"Implement navigation to ""Loan Transactions,"" ""Pay Installment,"" ""Installment Schedule,"" and ""Contracts"" pages",,
+3. Pay Instalment Page Functionalities,3.1Select Repayment Options,,Create repayment options UI,"The user can see all outstanding installments.
+
+User can select full amount, minimum due, or enter a custom amount.
+
+User can proceed to select a payment method.
+",
+,,,Implement API integration to fetch repayment options (GET),,
+,,,"Display repayment amount options (full, minimum, custom).",,
+,,,Develop API to handle installment payments (POST),,
+,3.2 Choose Payment Method,"As a user, I want to choose a payment method so that I can complete the repayment.",Create payment method selection UI,"User can choose between bank account or credit/debit card.
+
+User can enter and submit payment details.
+",
+,,,Implement API integration to fetch payment methods (GET),,
+,,,Implement form for entering payment details (POST),,
+"4. Payment Review, Confimation and Error Process",4.1 Review and Confirm Payment,"As a user, I want to review and confirm my repayment details so that I can ensure accuracy before submission.",Create review and confirm UI,"User can review repayment details.
+
+User can confirm or edit details.
+
+Payment is processed, and a confirmation message is displayed.
+",
+,,,Display selected repayment amount and payment method,,
+,,,Implement confirmation API call (POST),,
+5. Post-payment Updates,5.1 Payment Confirmation,"As a user, I want to receive a confirmation of my payment so that I know the transaction was successful.",Create payment confirmation UI,"User receives a payment confirmation message.
+
+Transaction details are displayed.
+
+Home Button redirect users to the Dashboard page.",
+,,Buttons redirect users to the respective pages.,Implement API call to confirm payment (POST),,
+,,,Display transaction status.,,
+,5.2 Update Dashboard,"As a user, I want my dashboard to reflect the updated loan status after a payment so that I can see my current loan balance.",Implement API call to fetch updated loan status (GET).,Dashboard displays the updated loan balance and status.,
+,,,Update dashboard with new loan status.,,
